@@ -1,0 +1,44 @@
+#include <iostream>
+#include <math.h>
+
+//std cout is studio c output. for() is variable, rule, and states add at each iteration.
+
+int main() {
+  float book = 0.0001; //Value for book variable
+  book = book * 1500000; //Doesnt matter how many clicks, this is just a set variable.
+  float shu = 1.55; //Value for shuriken variable
+  int stotal = 0; 
+  int skill = 105; //skillpoints
+  int scost = 1; 
+  float spow = 1; //placeholder for shuriken power
+  float top = 1;//Highest value. used to later check if a variable is higher, then output.
+
+  for(int s = 1; s<=25; s++)
+  {
+    for(int b = 1; b* 5<=skill; b++)
+    {
+      if(scost + (b * 5) <=skill)
+      {
+        if(((b * book) * spow) >= top)
+        {
+        top = ((b * book) * spow); 
+        std::cout <<"Book is " <<b<<
+        " and shu is "<< stotal
+        <<"\n";
+
+        std::cout <<"Power is "<<
+        top
+        <<"\n";
+        }
+      spow = pow(shu,stotal); //pow is power of. 5^4, 5*5*5*5.
+      }
+    }
+    if (scost + s <=skill)
+    {
+    scost = scost + s;
+    stotal = stotal + 1;
+    }
+  }
+
+  std::cout << "Hello World!\n"; //code has ended. Seriously, its to say that its ended..... Feel free to remove.
+}
